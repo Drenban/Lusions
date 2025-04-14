@@ -34551,18 +34551,35 @@ class Route {
         this.scrollNavPath = r,
         this.scrollNavText = n
     }
+    // setTarget(e) {
+    //     let t = null;
+    //     for (let r = 0; r < e.length; r++) {
+    //         let n = e[r];
+    //         if (n.regExp.test(this.path)) {
+    //             t = n;
+    //             break
+    //         }
+    //     }
+    //     t || (console.error("route not found for path: " + this.path),
+    //     window.location.href = window.location.origin + "/404"),
+    //     this.target = t.target
+    // }
     setTarget(e) {
         let t = null;
         for (let r = 0; r < e.length; r++) {
             let n = e[r];
             if (n.regExp.test(this.path)) {
                 t = n;
-                break
+                break;
             }
         }
-        t || (console.error("route not found for path: " + this.path),
-        window.location.href = window.location.origin + "/404"),
-        this.target = t.target
+        if (!t) {
+            console.warn("route not found for path: " + this.path);
+            this.target = "NotFoundPage"; // 设置默认目标
+        } else {
+            this.target = t.target;
+        }
+        return !!t;
     }
 }
 let loc = window.location
@@ -34589,10 +34606,20 @@ class RouteManager {
             target: t
         })
     }
+    // _createRoute(e) {
+    //     let t = this.routes[e] = new Route(e);
+    //     return t.setTarget(this.matchList),
+    //     t
+    // }
     _createRoute(e) {
         let t = this.routes[e] = new Route(e);
-        return t.setTarget(this.matchList),
-        t
+        const found = t.setTarget(this.matchList); // 获取返回值
+        if (!found) {
+            console.warn(`Creating route with no target for path: ${e}`);
+            // 可选：设置默认目标
+            t.target = "DefaultPage";
+        }
+        return t;
     }
     _fetchHtml(e) {
         let t = this.routes[e];
@@ -34678,12 +34705,22 @@ class RouteManager {
         e = this.parsePath(e),
         this._fetchHtml(e)
     }
+    // _onStatePop(e) {
+    //     e && e.preventDefault();
+    //     let t = this.parseUrl();
+    //     t !== this.currPath && (this.currPath = t,
+    //     this._pendingPath = t,
+    //     properties.hasInitialized ? this._fetchHtml(t) : this._initDom(this._createRoute(t)))
+    // }
     _onStatePop(e) {
         e && e.preventDefault();
         let t = this.parseUrl();
-        t !== this.currPath && (this.currPath = t,
-        this._pendingPath = t,
-        properties.hasInitialized ? this._fetchHtml(t) : this._initDom(this._createRoute(t)))
+        if (t !== this.currPath) {
+            this.currPath = t;
+            this._pendingPath = t;
+            const route = this._createRoute(t); // 创建路由实例
+            properties.hasInitialized ? this._fetchHtml(t) : this._initDom(route);
+        }
     }
 }
 const routeManager = new RouteManager;
