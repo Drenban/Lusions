@@ -35850,7 +35850,7 @@ class HomePageAudios {
 }
 const homePageAudios = new HomePageAudios;
 class HomePage extends Page {
-    path = "";
+    path = "lusions";
     id = "home";
     hasEndVisual = !1;
     updateAudio = !1;
