@@ -22234,18 +22234,18 @@ class Browser {
 }
 const browser$1 = new Browser;
 let CDN_PATH = "";
-window.location.hostname == "drenban.github.io" && (CDN_PATH = "https://drenban.github.io/lusions/");
-window.location.hostname == "drenban.github.io" && (window.location.href = "https://drenban.github.io/lusions/" + window.location.pathname + window.location.search);
+window.location.hostname == "lusion.co" && (CDN_PATH = "https://lusion.dev");
+window.location.hostname == "lusion.dev" && (window.location.href = "https://lusion.co" + window.location.pathname + window.location.search);
 class Settings {
     CDN_PATH = "";
-    TEAM_PATH = "/lusions/about/_astro/assets/team/";
-    TEAM_PATH = "/lusions/about/_astro/assets/team/";
-    PROJECT_PATH = "/lusions/about/_astro/assets/projects/";
-    MODEL_PATH = "/lusions/about/_astro/assets/models/";
-    IMAGE_PATH = "/lusions/about/_astro/assets/images/";
-    TEXTURE_PATH = "/lusions/about/_astro/assets/textures/";
-    AUDIO_PATH = "/lusions/about/_astro/assets/audios/";
-    SPRITE_PATH = "/lusions/about/_astro/assets/sprites/";
+    TEAM_PATH = "/assets/team/";
+    TEAM_PATH = "/assets/team/";
+    PROJECT_PATH = "/assets/projects/";
+    MODEL_PATH = "/assets/models/";
+    IMAGE_PATH = "/assets/images/";
+    TEXTURE_PATH = "/assets/textures/";
+    AUDIO_PATH = "/assets/audios/";
+    SPRITE_PATH = "/assets/sprites/";
     RENDER_TARGET_FLOAT_TYPE = null;
     DATA_FLOAT_TYPE = null;
     USE_FLOAT_PACKING = !1;
@@ -22260,7 +22260,7 @@ class Settings {
     USE_HD = !1;
     SHOW_DETAILS = "";
     CROSS_ORIGINS = {
-        "https://drenban.github.io/lusions/": "anonymous"
+        "https://lusion.dev/": "anonymous"
     };
     IS_DEV = !1;
     LOG = !1;
@@ -23294,6 +23294,7 @@ var UserAgent_DEPRECATED$1 = {
     isInWorker: !canUseDOM
 }, ExecutionEnvironment_1 = ExecutionEnvironment$1, ExecutionEnvironment = ExecutionEnvironment_1, useHasFeature;
 ExecutionEnvironment.canUseDOM && (useHasFeature = document.implementation && document.implementation.hasFeature && document.implementation.hasFeature("", "") !== !0);
+
 /**
  * Checks if an event is supported in the current execution environment.
  *
@@ -23308,6 +23309,7 @@ ExecutionEnvironment.canUseDOM && (useHasFeature = document.implementation && do
  * @internal
  * @license Modernizr 3.0.0pre (Custom Build) | MIT
  */
+
 function isEventSupported$1(o, e) {
     if (!ExecutionEnvironment.canUseDOM || e && !("addEventListener"in document))
         return !1;
@@ -27159,7 +27161,9 @@ class Line {
         this.circle.material.uniforms.u_mixRatio.value = w
     }
 }
+
 /*! @vimeo/player v2.26.0 | (c) 2025 Vimeo | MIT License | https://github.com/vimeo/player.js */
+
 function ownKeys(o, e) {
     var t = Object.keys(o);
     if (Object.getOwnPropertySymbols) {
@@ -27851,12 +27855,14 @@ function createCommonjsModule(o, e) {
     o(e, e.exports),
     e.exports
 }
+
 /*!
  * weakmap-polyfill v2.0.4 - ECMAScript6 WeakMap polyfill
  * https://github.com/polygonplanet/weakmap-polyfill
  * Copyright (c) 2015-2021 polygonplanet <polygon.planet.aqua@gmail.com>
  * @license MIT
  */
+
 (function(o) {
     if (o.WeakMap)
         return;
@@ -34555,7 +34561,7 @@ class Route {
             }
         }
         t || (console.error("route not found for path: " + this.path),
-        window.location.href = window.location.origin),
+        window.location.href = window.location.origin + "/404"),
         this.target = t.target
     }
 }
@@ -43792,12 +43798,14 @@ class BufItem extends XHRItem {
 BufItem.type = "buf";
 BufItem.extensions = ["buf"];
 BufItem.responseType = "arraybuffer";
+
 /*!
 fflate - fast JavaScript compression/decompression
 <https://101arrowz.github.io/fflate>
 Licensed under MIT. https://github.com/101arrowz/fflate/blob/master/LICENSE
 version 0.6.9
 */
+
 var durl = function(o) {
     return URL.createObjectURL(new Blob([o],{
         type: "text/javascript"
