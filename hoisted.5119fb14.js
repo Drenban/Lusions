@@ -22234,8 +22234,8 @@ class Browser {
 }
 const browser$1 = new Browser;
 let CDN_PATH = "";
-window.location.hostname == "drenban.github.io" && (CDN_PATH = "https://drenban.github.io/");
-window.location.hostname == "drenban.github.io" && (window.location.href = "https://drenban.github.io/" + window.location.pathname + window.location.search);
+window.location.hostname == "drenban.github.io" && (CDN_PATH = "https://drenban.github.io/lusions/");
+window.location.hostname == "drenban.github.io" && (window.location.href = "https://drenban.github.io/lusions/" + window.location.pathname + window.location.search);
 class Settings {
     CDN_PATH = "";
     TEAM_PATH = "/lusions/about/_astro/assets/team/";
@@ -22260,7 +22260,7 @@ class Settings {
     USE_HD = !1;
     SHOW_DETAILS = "";
     CROSS_ORIGINS = {
-        "https://drenban.github.io/": "anonymous"
+        "https://drenban.github.io/lusions/": "anonymous"
     };
     IS_DEV = !1;
     LOG = !1;
