@@ -40442,7 +40442,7 @@ class AboutPageAudios {
 const aboutPageAudios = new AboutPageAudios;
 let _c = new Color;
 class AboutPage extends Page {
-    path = "about";
+    path = "lusions/about";
     id = "about";
     endVisualColor = properties.offWhiteColorHex;
     preInit() {
