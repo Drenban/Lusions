@@ -45502,8 +45502,8 @@ class App {
        cameraControls.init(),
        visuals.init(),
        audios.init(),
-       -- settings.IS_DEV === !1 && (console.clear && console.clear(),
-       -- console.log("%c Created by Lusion: https://lusion.co/", "border:2px solid gray; padding:5px; font-family:monospace; font-size:11px;"))
+       settings.IS_DEV === !1 && (console.clear && console.clear(),
+       console.log("%c Created by Lusion: https://lusion.co/", "border:2px solid gray; padding:5px; font-family:monospace; font-size:11px;"))
    )
    }
    start() {
