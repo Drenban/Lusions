@@ -264,7 +264,7 @@ a,a:active,a:hover,a:visited {
 
 @font-face {
     font-family: Aeonik;
-    src: url(/assets/fonts/Aeonik-Regular.woff2) format("woff2"),url(/assets/fonts/Aeonik-Regular.woff) format("woff");
+    src: url(/lusions/assets/fonts/Aeonik-Regular.woff2) format("woff2"),url(/lusions/assets/fonts/Aeonik-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: block
@@ -272,7 +272,7 @@ a,a:active,a:hover,a:visited {
 
 @font-face {
     font-family: Aeonik;
-    src: url(/assets/fonts/Aeonik-Medium.woff2) format("woff2"),url(/assets/fonts/Aeonik-Medium.woff) format("woff");
+    src: url(/lusions/assets/fonts/Aeonik-Medium.woff2) format("woff2"),url(/lusions/assets/fonts/Aeonik-Medium.woff) format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: block
@@ -280,7 +280,7 @@ a,a:active,a:hover,a:visited {
 
 @font-face {
     font-family: Aeonik;
-    src: url(/assets/fonts/Aeonik-RegularItalic.woff2) format("woff2"),url(/assets/fonts/Aeonik-RegularItalic.woff) format("woff");
+    src: url(/lusions/assets/fonts/Aeonik-RegularItalic.woff2) format("woff2"),url(/lusions/assets/fonts/Aeonik-RegularItalic.woff) format("woff");
     font-weight: 400;
     font-style: italic;
     font-display: block
@@ -288,7 +288,7 @@ a,a:active,a:hover,a:visited {
 
 @font-face {
     font-family: IBMPlexMono;
-    src: url(/assets/fonts/IBMPlexMono-Regular.woff2) format("woff2"),url(/assets/fonts/IBMPlexMono-Regular.woff) format("woff");
+    src: url(/lusions/assets/fonts/IBMPlexMono-Regular.woff2) format("woff2"),url(/lusions/assets/fonts/IBMPlexMono-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: block
@@ -296,7 +296,7 @@ a,a:active,a:hover,a:visited {
 
 @font-face {
     font-family: IBMPlexMono;
-    src: url(/assets/fonts/IBMPlexMono-Medium.woff2) format("woff2"),url(/assets/fonts/IBMPlexMono-Medium.woff) format("woff");
+    src: url(/lusions/assets/fonts/IBMPlexMono-Medium.woff2) format("woff2"),url(/lusions/assets/fonts/IBMPlexMono-Medium.woff) format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: block
@@ -304,7 +304,7 @@ a,a:active,a:hover,a:visited {
 
 @font-face {
     font-family: LusionMono;
-    src: url(/assets/fonts/LusionMono.woff2) format("woff2"),url(/assets/fonts/LusionMono.woff) format("woff");
+    src: url(/lusions/assets/fonts/LusionMono.woff2) format("woff2"),url(/lusions/assets/fonts/LusionMono.woff) format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: block
@@ -4036,7 +4036,7 @@ html.is-black-bg #home-goal {
     width: 100%;
     backface-visibility: hidden;
     background: var(--color-white);
-    background-image: url(/assets/images/cards/back.png);
+    background-image: url(/lusions/assets/images/cards/back.png);
     background-size: contain;
     border-radius: .8em;
     transform: rotateY(180deg)
