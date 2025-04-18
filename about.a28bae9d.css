@@ -1464,7 +1464,7 @@ html.is-black-bg #scroll-indicator-bar,html.is-blue-bg #scroll-indicator-bar {
     height: .8em;
     top: .1em;
     left: -1em;
-    background-image: url(/assets/images/icons/arrow-right.svg);
+    background-image: url(/lusions/assets/images/icons/arrow-right.svg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -5147,7 +5147,7 @@ html.is-white-bg .end-section-content-cross:before,html.is-white-bg .end-section
 .end-bottom-arrow {
     width: 1em;
     height: 1em;
-    background: url(/assets/images/icons/arrow-down.svg);
+    background: url(/lusions/assets/images/icons/arrow-down.svg);
     background-size: cover;
     background-repeat: no-repeat;
     flex-shrink: 0;
