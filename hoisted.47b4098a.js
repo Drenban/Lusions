@@ -22324,7 +22324,7 @@ var minSignal$1 = {
            if (!g)
                throw n;
            _ = _ || 0;
-           for (var M = this._listeners, S, b, C, w = M.length; w; )
+           for (var M = this._listeners, S, b, C, w = M.length; w--; )
                if (S = M[w],
                S.f === g && S.c === v)
                    return !1;
@@ -22358,7 +22358,7 @@ var minSignal$1 = {
            if (!g)
                return this._listeners.length = 0,
                !0;
-           for (var _ = this._listeners, T, M = _.length; M; )
+           for (var _ = this._listeners, T, M = _.length; M--; )
                if (T = _[M],
                T.f === g && (!v || T.c === v))
                    return T.j = 0,
@@ -22369,7 +22369,7 @@ var minSignal$1 = {
        function p(g) {
            g = a.call(arguments, 0),
            this.dispatchCount++;
-           for (var v = this.dispatchCount, _ = this._listeners, T, M, S = _.length; S; )
+           for (var v = this.dispatchCount, _ = this._listeners, T, M, S = _.length; S--; )
                if (T = _[S],
                T && T.j < v && (T.j = v,
                T.r.apply(T.c, T.a.concat(g)) === !1)) {
@@ -22377,7 +22377,7 @@ var minSignal$1 = {
                    break
                }
            for (_ = this._listeners,
-           S = _.length; S; )
+           S = _.length; S--; )
                _[S].j = 0;
            return M
        }
@@ -22418,7 +22418,7 @@ var quickLoader$b = {
            if (!g)
                throw n;
            _ = _ || 0;
-           for (var M = this._listeners, S, b, C, w = M.length; w; )
+           for (var M = this._listeners, S, b, C, w = M.length; w--; )
                if (S = M[w],
                S.f === g && S.c === v)
                    return !1;
@@ -22452,7 +22452,7 @@ var quickLoader$b = {
            if (!g)
                return this._listeners.length = 0,
                !0;
-           for (var _ = this._listeners, T, M = _.length; M; )
+           for (var _ = this._listeners, T, M = _.length; M--; )
                if (T = _[M],
                T.f === g && (!v || T.c === v))
                    return T.j = 0,
@@ -22463,7 +22463,7 @@ var quickLoader$b = {
        function p(g) {
            g = a.call(arguments, 0),
            this.dispatchCount++;
-           for (var v = this.dispatchCount, _ = this._listeners, T, M, S = _.length; S; )
+           for (var v = this.dispatchCount, _ = this._listeners, T, M, S = _.length; S--; )
                if (T = _[S],
                T && T.j < v && (T.j = v,
                T.r.apply(T.c, T.a.concat(g)) === !1)) {
@@ -22471,7 +22471,7 @@ var quickLoader$b = {
                    break
                }
            for (_ = this._listeners,
-           S = _.length; S; )
+           S = _.length; S--; )
                _[S].j = 0;
            return M
        }
@@ -22586,7 +22586,7 @@ function _getLoadedWeight(o) {
 function _onItemLoad(o, e, t) {
    if (this.loadedWeight = _getLoadedWeight(e),
    !t) {
-       for (var r = this.activeItems, n = r.length; n; )
+       for (var r = this.activeItems, n = r.length; n--; )
            if (r[n] === o) {
                r.splice(n, 1);
                break
@@ -22663,7 +22663,7 @@ function retrieve(o, e) {
 }
 function testExtensions(o, e) {
    if (o) {
-       for (var t = _getExtension(o), r = e.extensions, n = r.length; n; )
+       for (var t = _getExtension(o), r = e.extensions, n = r.length; n--; )
            if (t === r[n])
                return !0;
        return !1
@@ -23011,7 +23011,7 @@ ImageItem$1.retrieve = function(o) {
        computedStyle$1(o, "background-image").replace(/s?url\(\s*?['"]?([^;]*?)['"]?\s*?\)/g, function(r, n) {
            e.push(n)
        });
-       for (var t = e.length; t; )
+       for (var t = e.length; t--; )
            _isNotData(e[t]) || e.splice(t, 1);
        return e.length ? e : !1
    } else
@@ -23661,7 +23661,7 @@ class Input {
    hasThroughElem(e, t) {
        let r = this[t + "ThroughElems"] || this.currThroughElems
          , n = r.length;
-       for (; n; )
+       for (; n--; )
            if (r[n] === e)
                return !0;
        return !1
@@ -23669,7 +23669,7 @@ class Input {
    hasThroughElemWithClass(e, t) {
        let r = this[t + "ThroughElems"] || this.currThroughElems
          , n = r.length;
-       for (; n; )
+       for (; n--; )
            if (r[n].classList.contains(e))
                return r[n];
        return null
@@ -25659,7 +25659,7 @@ uniform vec3 u_bgColor;uniform vec2 u_aspect;uniform vec2 u_domWH;uniform float 
            a[l] = arguments[l];
        var c = a.length;
        if (r)
-           for (c || r.removeChild(this); c; ) {
+           for (c || r.removeChild(this); c--; ) {
                var u = a[c];
                typeof u != "object" ? u = this.ownerDocument.createTextNode(u) : u.parentNode && u.parentNode.removeChild(u),
                c ? r.insertBefore(this.previousSibling, u) : r.replaceChild(u, this)
@@ -26589,7 +26589,7 @@ class Audios {
                }),
                this.groups[e] = t;
                let n = r.length;
-               for (; n; ) {
+               for (; n--; ) {
                    let a = r[n]
                      , l = this._parseCountText(a.id)
                      , c = l.text;
@@ -43952,7 +43952,7 @@ var flrm = hMap(flt, 9, 1)
                            u += 2,
                            Y = I[k - 1]) : S == 17 ? (D = 3 + bits(o, u, 7),
                            u += 3) : S == 18 && (D = 11 + bits(o, u, 127),
-                           u += 7); D; )
+                           u += 7); D--; )
                                I[k++] = Y
                        }
                    }
@@ -44140,14 +44140,14 @@ class EXRLoader extends DataTextureLoader {
                    ge = V.lc,
                    A + ye > W + 1)
                        throw new Error("Something wrong with hufUnpackEncTable");
-                   for (; ye; )
+                   for (; ye--; )
                        $[A++] = 0;
                    A--
                } else if (pe >= 59) {
                    let ye = pe - 59 + 2;
                    if (A + ye > W + 1)
                        throw new Error("Something wrong with hufUnpackEncTable");
-                   for (; ye; )
+                   for (; ye--; )
                        $[A++] = 0;
                    A--
                }
