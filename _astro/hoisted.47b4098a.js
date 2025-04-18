@@ -22234,8 +22234,8 @@ class Browser {
 }
 const browser$1 = new Browser;
 let CDN_PATH = "";
-window.location.hostname == "lusion.co" && (CDN_PATH = "https://lusion.dev");
-window.location.hostname == "lusion.dev" && (window.location.href = "https://lusion.co" + window.location.pathname + window.location.search);
+window.location.hostname == "drenban.github.io" && (CDN_PATH = "https://drenban.github.io/lusions");
+window.location.hostname == "drenban.github.io/lusions" && (window.location.href = "https://drenban.github.io" + window.location.pathname + window.location.search);
 class Settings {
     CDN_PATH = "";
     TEAM_PATH = "/assets/team/";
@@ -22260,7 +22260,7 @@ class Settings {
     USE_HD = !1;
     SHOW_DETAILS = "";
     CROSS_ORIGINS = {
-        "https://lusion.dev/": "anonymous"
+        "https://drenban.github.io/lusions/": "anonymous"
     };
     IS_DEV = !1;
     LOG = !1;
@@ -45502,8 +45502,9 @@ class App {
         cameraControls.init(),
         visuals.init(),
         audios.init(),
-        settings.IS_DEV === !1 && (console.clear && console.clear(),
-        console.log("%c Created by Lusion: https://lusion.co/", "border:2px solid gray; padding:5px; font-family:monospace; font-size:11px;")))
+        -- settings.IS_DEV === !1 && (console.clear && console.clear(),
+        -- console.log("%c Created by Lusion: https://lusion.co/", "border:2px solid gray; padding:5px; font-family:monospace; font-size:11px;"))
+    )
     }
     start() {
         visuals.start()
